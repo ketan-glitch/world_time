@@ -12,7 +12,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
+    print(data['location']);
     print(data);
+    print(data['location']);
     //set background
     String bgImage = data['isDaytime']? 'day.jpeg' : 'night.jpeg';
     Color bgColor = data['isDaytime']? Colors.blue : Colors.indigo;
@@ -37,9 +39,9 @@ class _HomeState extends State<Home> {
                       print(result);
                       setState(() {
                         data = {
-                          'Location': result['location'],
-                          'time': result['time'],
+                          'location': result['location'],
                           'flag': result['flag'],
+                          'time': result['time'],
                           'isDaytime': result['isDaytime']
                         };
                       });

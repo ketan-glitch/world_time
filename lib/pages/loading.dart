@@ -33,11 +33,17 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       backgroundColor: Colors.blue[900],
       body: Center(
-        child: SpinKitCubeGrid(
+        child:
+        SpinKitCubeGrid(
           color: Colors.white,
           size: 50.0,
         ),
-      )
+    //     AnimatedContainer(
+    //       height: MediaQuery.of(context).size.height*0.1,
+    //       width: MediaQuery.of(context).size.height*0.1,
+    //       duration: Duration(seconds: 2),
+    // ),
+    )
     );
   }
 }
